@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Teacher</title>
+	<link href="css/Style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body style="background-color:pink;">
+<form>
+		<center><div id="addTeacher">
+			<h2 id="h2">Add Teachers</h2>
+			<table>
+				<tr>
+					<td><label id="label">Add Staff ID</label></td>
+					<td><input type="number" name="staffID" class="form-control"></td>
+				</tr>
+				<tr>
+					<td><label id="label">Add Teacher's first name</label></td>
+					<td><input type="text" name="firstname" class="form-control"></td>
+				</tr>
+				<tr>
+					<td><label id="label">Add Teacher's last name</label></td>
+					<td><input type="text" name="lastname" class="form-control"></td>
+				</tr>
+				<tr>
+					<td><label id="label">Add Teacher's image</label></td>
+					<td><p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+					<p><label for="file" style="cursor: pointer;"><i>Click here to Upload Image</i></label></p>
+					<p><img id="output" width="200" /></p></td>
+				</tr>
+				<tr>
+					<td><label id="label">Class she/he teaches</label></td>
+					<td><input type="checkbox" id="class" name="5A" value="5A">
+					 <label for="class">5th A</label>&nbsp;
+					 <input type="checkbox" id="class" name="5B" value="5B">
+					 <label for="class">5th B</label>&nbsp;
+					 <input type="checkbox" id="class" name="5C" value="5C">
+					 <label for="class">5th C</label><br>
+					 <input type="checkbox" id="class" name="6A" value="6A">
+					 <label for="class">6th A</label>&nbsp;
+					 <input type="checkbox" id="class" name="6B" value="6B">
+					 <label for="class">6th B</label>&nbsp;
+					 <input type="checkbox" id="class" name="6C" value="6C">
+					 <label for="class">6th C</label><br>
+					 <input type="checkbox" id="class" name="7A" value="7A">
+					 <label for="class">7th A</label>&nbsp;
+					 <input type="checkbox" id="class" name="7B" value="7B">
+					 <label for="class">7th B</label>&nbsp;
+					 <input type="checkbox" id="class" name="7C" value="7C">
+					 <label for="class">7th C</label><br>
+					 <input type="checkbox" id="class" name="8A" value="8A">
+					 <label for="class">8th A</label>&nbsp;
+					 <input type="checkbox" id="class" name="8B" value="8B">
+					 <label for="class">8th B</label>&nbsp;
+					 <input type="checkbox" id="class" name="8C" value="8C">
+					 <label for="class">8th C</label><br>
+					 <input type="checkbox" id="class" name="9A" value="9A">
+					 <label for="class">9th A</label>&nbsp;
+					 <input type="checkbox" id="class" name="9B" value="9B">
+					 <label for="class">9th B</label>&nbsp;
+					 <input type="checkbox" id="class" name="9C" value="9C">
+					 <label for="class">9th C</label><br>
+					 <input type="checkbox" id="class" name="10A" value="10A">
+					 <label for="class">10th A</label>&nbsp;
+					 <input type="checkbox" id="class" name="10B" value="10B">
+					 <label for="class">10th B</label>&nbsp;
+					 <input type="checkbox" id="class" name="10C" value="10C">
+					 <label for="class">10th C</label><br>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="save" value="save" class="btn btn-warning"></td>
+					<td><input type="reset" name="reset" value="reset" class="btn btn-danger"></td>
+				</tr>
+			</table>
+		</div></center>
+</form>
+</body>
+</html>
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>

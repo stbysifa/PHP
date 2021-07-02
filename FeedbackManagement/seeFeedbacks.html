@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>See Feedback</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			    $("#class").hide();
+			    $("#teacher").hide();
+
+			  $("#hide").click(function(){
+			    $("#class").show();
+			    $("#teacher").hide();
+			  });
+			   
+			  $("#show").click(function(){
+			    $("#teacher").show();
+			    $("#class").hide();
+			  });
+			});
+		</script>
+</head>
+<body>
+	<button id="hide">class</button>
+	<button id="show">Teacher</button>
+<form>
+	<div id="teacher"><br>
+			<table style="border:solid 2px">
+				<tr>
+					<th>Staff Id</th>
+					<th>Name</th>
+					<th>Subject Knowledge</th>
+					<th>Teaching Style</th>
+					<th>External Knowledge</th>
+					<th>Confidence</th>
+					<th>Understandable</th>
+					<th>OverAll Rating</th>
+				</tr>
+				<tr>
+					<td><label name="sid"></label></td>
+					<td><label name="name"></label></td>
+					<td><label name="sk"></label></td>
+					<td><label name="ts"></label></td>
+					<td><label name="ek"></label></td>
+					<td><label name="con"></label></td>
+					<td><label name="und"></label></td>
+					<td><label name="oar"></label></td>
+				</tr>
+			</table>
+	</div>
+	<div id="class">
+		
+		
+	</div>
+</form>
+
+</body>
+</html>
